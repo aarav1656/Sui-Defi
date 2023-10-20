@@ -1,7 +1,8 @@
 import { DeepBookClient } from "@mysten/deepbook"; // Import your TypeScript SDK
 import { useState } from "react";
 import { PrimaryButton } from "../ethos_components";
-const PlaceLimitOrderComponent = () => {
+
+const PlaceMarketOrderComponent = () => {
     const client = new DeepBookClient(); // Initialize your SDK
 
     const [token1, setToken1] = useState("");
@@ -16,18 +17,20 @@ const PlaceLimitOrderComponent = () => {
     const [transactionSent, setTransactionSent] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    
-    const handlePlaceLimitOrder = async () => {
+    const a = isBid ? 'bid' : 'ask';
+    const handlePlaceMarketOrder = async () => {
 
-        const a = isBid ? 'bid' : 'ask';
+
         try {
-            // Call placeLimitOrder function with the provided parameters
-            const transactionBlock = client.placeLimitOrder(
+            // Call placeMarketOrder function with the provided parameters
+            const transactionBlock = client.placeMarketOrder(
                 poolId,
-                BigInt(price),
                 BigInt(quantity),
                 a,
-            );
+                token1,
+                token2
+            )
+
 
             // Send the transaction
             console.log(transactionBlock);
@@ -41,7 +44,7 @@ const PlaceLimitOrderComponent = () => {
 
     return (
         <div>
-            <h1>Place Limit Order</h1>
+            <h1>Place Market Order</h1>
             <form onSubmit={(e) => e.preventDefault()}>
                 <div>
                     <label htmlFor="token1">Token 1</label>
@@ -127,7 +130,7 @@ const PlaceLimitOrderComponent = () => {
                         onChange={(e) => setAccountCap(e.target.value)}
                     />
                 </div>
-                <PrimaryButton onClick={handlePlaceLimitOrder}>Place Limit Order</PrimaryButton>
+                <PrimaryButton onClick={handlePlaceMarketOrder}>Place Market Order</PrimaryButton>
             </form>
             {transactionSent && <p>Transaction sent successfully!</p>}
             {error && <p>Error: {error}</p>}
@@ -135,4 +138,4 @@ const PlaceLimitOrderComponent = () => {
     );
 };
 
-export default PlaceLimitOrderComponent;
+export default PlaceMarketOrderComponent;

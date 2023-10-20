@@ -1,5 +1,6 @@
 import { DeepBookClient } from "@mysten/deepbook";
 import { useState } from "react";
+import { PrimaryButton } from "../ethos_components";
 
 const DepositBaseComponent = () => {
     const client = new DeepBookClient(); // Initialize your SDK
@@ -28,7 +29,7 @@ const DepositBaseComponent = () => {
     };
     return (
         <div>
-            <h1>Deposit Base Asset</h1>
+            <h1>Deposit Base & Quote Asset</h1>
             <form onSubmit={(e) => e.preventDefault()}>
                 <div>
                     <label htmlFor="token1">Token 1</label>
@@ -84,7 +85,7 @@ const DepositBaseComponent = () => {
                         onChange={(e) => setAccountCap(e.target.value)}
                     />
                 </div>
-                <button onClick={handleDeposit}>Deposit Base Asset</button>
+                <PrimaryButton onClick={handleDeposit}>Deposit Asset</PrimaryButton>
             </form>
             {transactionSent && <p>Transaction sent successfully!</p>}
             {error && <p>Error: {error}</p>}

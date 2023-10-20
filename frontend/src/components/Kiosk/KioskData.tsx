@@ -16,6 +16,9 @@ import { ExplorerLink } from '../Base/ExplorerLink';
 import { Loading } from '../Base/Loading';
 import { OwnedObjects } from '../Inventory/OwnedObjects';
 import { KioskItems } from './KioskItems';
+import Choose from '../Choose';
+import CreatePool from '../Swap';
+import DepositBaseComponent from '../DepositBaseComponent';
 
 export function KioskData({ kioskId }: { kioskId: string }) {
 	const { currentAccount } = useWalletKit();
@@ -80,6 +83,8 @@ export function KioskData({ kioskId }: { kioskId: string }) {
 				<Tab.List>
 					<Tab className="tab-title">My Kiosk</Tab>
 					<Tab className="tab-title">My Wallet</Tab>
+					<Tab className="tab-title">Place Orders</Tab>
+					<Tab className="tab-title">CreatePool</Tab>
 					<Tab className="tab-title">Lend</Tab>
 					<Tab className="tab-title">Borrow</Tab>
 					<Tab className="tab-title">My Loans</Tab>
@@ -91,6 +96,9 @@ export function KioskData({ kioskId }: { kioskId: string }) {
 							<OwnedObjects kioskId={kioskId} address={currentAccount.address}></OwnedObjects>
 						)}
 					</Tab.Panel>
+					<Tab.Panel> <Choose /> </Tab.Panel>
+					<Tab.Panel> <CreatePool /> </Tab.Panel>
+					<Tab.Panel> <DepositBaseComponent /> </Tab.Panel>
 				</Tab.Panels>
 			</Tab.Group>
 		</div>

@@ -1,9 +1,9 @@
 import { DeepBookClient } from "@mysten/deepbook";
 import { useState } from 'react';
+import { PrimaryButton } from "../ethos_components";
 
-const TradeandSwap = () => {
+const CreatePool = () => {
     const client = new DeepBookClient();
-
 
     const [formValues, setFormValues] = useState({
         token1: "",
@@ -75,10 +75,10 @@ const TradeandSwap = () => {
                         onChange={handleChange}
                     />
                 </div>
-                <button type="submit">Create Pool</button>
+                <PrimaryButton type="submit">Create Pool</PrimaryButton>
             </form>
         </div>
     );
 };
 
-export default TradeandSwap;
+export default CreatePool;

@@ -1,5 +1,7 @@
 # Sui-Defi
 
+"Lend Borrow Order Take Loan all with your NFTs as Collaterals"
+
 Sui-Defi is a decentralized finance (DeFi) platform that allows users to lend, borrow, take loans, and earn interest using their non-fungible tokens (NFTs) as collateral. The platform is built on the Sui blockchain, which offers several unique features such as zkLogin, horizontal scaling, and its unique approach to data storage. 
 
 ## Technologies used
