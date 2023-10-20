@@ -31,7 +31,7 @@ export default function Root() {
 							<Outlet />
 						</div>
 						<div className="mt-6 border-t border-primary text-center py-6">
-							Copyright © Mysten Labs, Inc.
+							Made with 💗 @Unfold23
 						</div>
 						<Toaster position="bottom-center" />
 					</KioskClientContext.Provider>
