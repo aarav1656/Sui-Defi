@@ -6,7 +6,7 @@ import { formatAddress } from '@mysten/sui.js/utils';
 import { useWalletKit } from '@mysten/wallet-kit';
 import { useQueryClient } from '@tanstack/react-query';
 import { toast } from 'react-hot-toast';
-
+import { DeepBookClient } from "@mysten/deepbook";
 import { useKioskDetails } from '../../hooks/kiosk';
 import { useWithdrawMutation } from '../../mutations/kiosk';
 import { TANSTACK_KIOSK_DATA_KEY } from '../../utils/constants';
@@ -19,7 +19,7 @@ import { KioskItems } from './KioskItems';
 
 export function KioskData({ kioskId }: { kioskId: string }) {
 	const { currentAccount } = useWalletKit();
-
+	const client = new DeepBookClient();
 	const { data: kiosk, isLoading } = useKioskDetails(kioskId);
 
 	const queryClient = useQueryClient();
@@ -62,6 +62,16 @@ export function KioskData({ kioskId }: { kioskId: string }) {
 							)}
 						</div>
 						<div className="mt-2">UID Exposed: {kiosk.allowExtensions.toString()} </div>
+						<button
+							className="mt-2 ease-in-out duration-300 rounded border border-transparent px-4 bg-gray-200 text-xs !py-1"
+							onClick={() => {
+								const ack = client.createAccount(currentAccount?.address);
+								alert("Customer account created. Please check your wallet to confirm.");
+								console.log(ack);
+							}}
+						>
+							Create Custodial Account
+						</button>
 					</div>
 				)}
 			</div>
