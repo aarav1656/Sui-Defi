@@ -69,6 +69,9 @@ export function KioskData({ kioskId }: { kioskId: string }) {
 				<Tab.List>
 					<Tab className="tab-title">My Kiosk</Tab>
 					<Tab className="tab-title">My Wallet</Tab>
+					<Tab className="tab-title">Lend</Tab>
+					<Tab className="tab-title">Borrow</Tab>
+					<Tab className="tab-title">My Loans</Tab>
 				</Tab.List>
 				<Tab.Panels>
 					<Tab.Panel>{kioskId && <KioskItems kioskId={kioskId}></KioskItems>}</Tab.Panel>
