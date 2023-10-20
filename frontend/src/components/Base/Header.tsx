@@ -21,7 +21,7 @@ export function Header() {
 					className="text-lg font-bold text-center mr-3 bg-transparent ease-in-out duration-300 rounded border border-transparent py-2 px-4 bg-gray-200"
 					onClick={() => navigate('/')}
 				>
-					Kiosk demo
+					Sui Defi
 				</button>
 				<Button
 					className={classNames(
