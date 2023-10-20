@@ -17,6 +17,7 @@
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.15",
+		"@mysten/deepbook": "^0.5.5",
 		"@mysten/kiosk": "^0.7.6",
 		"@mysten/sui.js": "^0.44.0",
 		"@mysten/wallet-kit": "^0.8.0",

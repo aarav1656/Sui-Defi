@@ -437,6 +437,13 @@
   dependencies:
     bs58 "^5.0.0"
 
+"@mysten/deepbook@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@mysten/deepbook/-/deepbook-0.5.5.tgz#b51cd0d4bf8c37c916c91284841401cabc0c1364"
+  integrity sha512-AdPkoo7x7w+wklQ9gZshSNaJCfS7+rkz8P7VdyiqKPLqaXp30Rdj9KGFQ7k1jTbf8e3lipMNzdxuAV0/WNbqSA==
+  dependencies:
+    "@mysten/sui.js" "0.44.0"
+
 "@mysten/kiosk@^0.7.6":
   version "0.7.6"
   resolved "https://registry.yarnpkg.com/@mysten/kiosk/-/kiosk-0.7.6.tgz#d9370f8efce5b185e2eee15c36693e32fbb987f8"
