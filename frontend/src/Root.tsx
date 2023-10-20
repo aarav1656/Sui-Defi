@@ -11,7 +11,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from './components/Base/Header';
 import { KioskClientContext } from './context/KioskClientContext';
 import { RpcClientContext } from './context/RpcClientContext';
-
+import { EthosConnectProvider } from 'ethos-connect';
 const queryClient = new QueryClient();
 const suiClient = new SuiClient({ url: getFullnodeUrl('testnet') });
 
@@ -22,6 +22,7 @@ const kioskClient = new KioskClient({
 
 export default function Root() {
 	return (
+		<EthosConnectProvider>
 		<WalletKitProvider>
 			<QueryClientProvider client={queryClient}>
 				<RpcClientContext.Provider value={suiClient}>
@@ -38,5 +39,6 @@ export default function Root() {
 				</RpcClientContext.Provider>
 			</QueryClientProvider>
 		</WalletKitProvider>
+		</EthosConnectProvider>
 	);
 }

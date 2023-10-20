@@ -20,3 +20,5 @@ Sui-Defi offers several features that make it an attractive platform for users l
 - Kiosk: Sui-Defi uses Kiosk, a DeFi protocol on the Sui blockchain that allows users to trade, farm, and borrow.
 
 In conclusion, Sui-Defi is a DeFi platform built on the Sui blockchain that allows users to lend, borrow, take loans, and earn interest using their NFTs as collateral. The platform uses Deepbook as its liquidity layer and Kiosk as its DeFi protocol. Sui-Defi offers several features that make it an attractive platform for users looking to participate in DeFi using their NFTs as collateral.
+
+https://suiexplorer.com/object/0xbe97bdbe9be409e1e6af8b193f3beec710fe124ac3f00b5e9df13bc59c15b874?network=testnet

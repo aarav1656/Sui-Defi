@@ -38,6 +38,7 @@ export function KioskData({ kioskId }: { kioskId: string }) {
 	return (
 		<div className="container">
 			<div className="my-12 ">
+				<div className='text-2xl'>Do More With your NFTs</div>
 				{kiosk && (
 					<div className="gap-5 items-center">
 						<div>

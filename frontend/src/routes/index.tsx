@@ -6,6 +6,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Root from '../Root';
 import Home from './Home';
 import SingleKiosk from './SingleKiosk';
+import MintNFT from '../components/MintNFT';
 
 export const router = createBrowserRouter([
 	{
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
 			{
 				path: '/kiosk/:id',
 				element: <SingleKiosk />,
+			},
+			{
+				path: '/mintnft',
+				element: <MintNFT />,
 			},
 		],
 	},
